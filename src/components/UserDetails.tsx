@@ -1,10 +1,11 @@
 import { UserDetailsType } from "./UserDetailsType";
 
-export const UserDetails = (props: {details: any}) => {
+export const UserDetails = (props: {details: UserDetailsType}) => {
 
     const {details} = props;
 
-    if (Object.keys(details).length) {
+    
+    if (details['name'].length) {
         return (
             <div className="userdetails">
                 <div className="userdetails__avatar">

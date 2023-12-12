@@ -38,7 +38,19 @@ function App() {
     }
   ];
   const [users, setUsers] = useState(initialUsers);
-  const [details, setDetails] = useState({});
+
+  const initialUserState = {
+    id: -1,
+    name: '',
+    avatar: '',
+    details: {
+      city: '',
+      company: '',
+      position: ''
+    }
+  };
+  const [details, setDetails] = useState(initialUserState);
+
   const [idDetailed, setId] = useState(-1);
 
   const urlUsers = ' https://raw.githubusercontent.com/netology-code/ra16-homeworks/master/hooks-context/use-effect/data/users.json';
